@@ -10,7 +10,7 @@ class reference extends Component{
     constructor(props) {
         super(props);
         this.state = { 
-          Email: '',
+          reference: '',
 
         };
     }
@@ -28,10 +28,10 @@ class reference extends Component{
     
     <Input
         placeholder='Votre réference'
-        onChangeText={(Email => this.setState({Email}))}
+        onChangeText={(reference => this.setState({reference}))}
         keyboardType='email-address'
         autoCapitalize='none'
-        value={this.state.Email}
+        value={this.state.reference}
       
     />
      
@@ -43,7 +43,11 @@ class reference extends Component{
       fontSize : d*20 , alignSelf:'center'}} 
       containerStyle ={{ alignSelf:'center',width:'80%'}} 
          onPress={()=> {
-             this.props.navigation.navigate("info_from_bd");
+             if (this.state.reference ===""){
+                this.props.navigation.navigate("echec_identification");
+
+             }else{
+             this.props.navigation.navigate("info_from_bd");}
          }}
 
 />

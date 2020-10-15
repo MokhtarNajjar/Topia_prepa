@@ -46,7 +46,7 @@ class info_from_bd extends Component{
          containerStyle ={{ textAlign:'center',alignSelf:'center',width:'80%'}} 
 
           onPress={() => {
-              //    this.props.navigation.navigate('identifier');
+                 this.props.navigation.navigate('payer');
 
           }}
   
