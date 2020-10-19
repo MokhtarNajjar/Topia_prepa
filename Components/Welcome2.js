@@ -53,7 +53,7 @@ class Welcome2 extends Component{
     <ScrollView>
         <View >
          <Text style={styles.title}>Bienvenue</Text>
-         <Text style={styles.body}>TOPIA PAY</Text>
+         <Text style={{textAlign:'center',fontSize:d*20}}>TOPIA PAY</Text>
    
         <View style={{paddingVertical:'5%'}}>
         <Image  source= {require('../images/logo.png')} style={styles.logo } />
@@ -62,8 +62,8 @@ class Welcome2 extends Component{
         <Text style={styles.titlefinal2}>Préparez votre paiement sur votre mobile</Text>
         <Text style={styles.titlefinal2}>Rendez vous sur une borne de paiement </Text>
         <Text style={styles.titlefinal2}>Scannez le code que vous recevrez sur votre mobile </Text>
-        <Text style={styles.titlefinal2}>Payez , </Text>
-        <Text style={styles.titlefinal2}>C'est fait !  </Text>
+        <Text style={{fontSize:d*20,textAlign:'center'}}>Payez , </Text>
+        <Text style={{fontSize:d*20,textAlign:'center'}}>C'est fait !  </Text>
 
         <Button label="Tapez Suite pour Continuer" 
           rounded size="sm" 
@@ -87,6 +87,7 @@ class Welcome2 extends Component{
        */
       console.log(this.props)
       this.props.navigation.navigate('identifier');
+//        this.props.navigation.navigate('especes');
 
     } 
         }

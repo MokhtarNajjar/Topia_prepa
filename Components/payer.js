@@ -5,7 +5,7 @@ import { View, Text,ImageBackground,text ,TextInput,Style,StyleSheet,FlatList,se
 import styles , {d} from '../Styles/GlobalStyle'
 import Button from "react-native-bootstrap-buttons";
 import Dialog, {DialogFooter, DialogButton, DialogContent } from 'react-native-popup-dialog';
-
+import {info} from '../data/dataa'
 
 class payer extends Component{
     constructor(props) {
@@ -46,6 +46,7 @@ class payer extends Component{
       fontSize : d*20 , alignSelf:'center'}} 
       containerStyle ={{ }} 
          onPress={()=> {
+                info.montant=this.state.montant
                 this.props.navigation.navigate("type_paiement");
 
              }}
@@ -67,7 +68,6 @@ class payer extends Component{
 />
 <Dialog
     visible={this.state.visible}
-  width="0.7"
     onTouchOutside={() => {
       this.setState({ visible: false });
     }}

@@ -28,10 +28,11 @@ class identifier extends Component{
             <ImageBackground source= {require('../images/bg.png')} style={styles.back}>
     
     <ScrollView>
-            <View style={{flex:2}}>
-             <Text style={styles.title}>Pour s'identifier , </Text>
-             <Text style={styles.title}>Vous souhaitez </Text>
-    
+            <View style={{flex:5}}>
+                <View Style={{padding:'20%'}}> 
+             <Text style={styles.titleblue}>Pour s'identifier , Vous souhaitez</Text>
+             </View>
+             <View style={{padding:'10%',flex:3}}>
              <Button label="Scanner le code barre de votre facture " 
               rounded size="sm" 
                 labelStyle={{fontStyle: 'italic',textAlign:'center',
@@ -42,8 +43,9 @@ class identifier extends Component{
 
                 }}
     />
-    
- <Text style={styles.title}>ou  </Text>
+    </View>
+ <Text style={styles.titleblue}>ou  </Text>
+ <View style={{padding:'10%',flex:3}}>
             
  <Button label="Tapez votre réference client " 
               rounded size="sm" 
@@ -54,6 +56,7 @@ class identifier extends Component{
                     this.props.navigation.navigate("reference");
                 }}
     />
+    </View>
     </View>
             </ScrollView>
 </ImageBackground>

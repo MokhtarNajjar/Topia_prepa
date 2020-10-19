@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
 
     title : { 
 
-       flex:5,
 
        height:"10%",
 
@@ -70,8 +69,47 @@ const styles = StyleSheet.create({
 
     },
 
-    
+    titleblue : { 
 
+
+      padding : '5%',
+      paddingBottom:'0%',
+      justifyContent: 'center',
+      alignItems: 'center' , 
+     fontStyle: 'italic',
+//     fontWeight: 'bold',
+     fontSize: d*28,
+    color:'blue',
+    textAlign:'center',
+     alignSelf:'center',
+   },
+   
+   titleblue2 : { 
+textAlign:'center',
+    flex:5,
+          padding : '5%',
+          paddingBottom:'0%',
+          justifyContent: 'center',
+          alignItems: 'center' , 
+         fontStyle: 'italic',
+    //     fontWeight: 'bold',
+         fontSize: d*22,
+        color:'#4f4c9c',
+         alignSelf:'center',
+       },
+       titleblue3 : { 
+        textAlign:'center',
+            flex:5,
+                  padding : '5%',
+                  paddingBottom:'0%',
+                  justifyContent: 'center',
+                  alignItems: 'center' , 
+                 fontStyle: 'italic',
+            //     fontWeight: 'bold',
+                 fontSize: d*18,
+                color:'#4f4c9c',
+                 alignSelf:'center',
+               },
     title2 : { 
 
       //flex:0.1,
@@ -93,11 +131,6 @@ const styles = StyleSheet.create({
      fontSize: d*36,
 
      alignSelf:'center',
-
-     
-
-     
-
    },
 
    Email : {
@@ -283,7 +316,6 @@ const styles = StyleSheet.create({
       paddingTop : '10%',
 
        fontSize :d*21.5,
-
        textAlign:'auto'
 
        
@@ -295,6 +327,7 @@ const styles = StyleSheet.create({
       padding : '5%' ,
       paddingTop:'0%',
        fontSize :d*19.5,
+      fontFamily:"Akrobat-Regular" ,
 
        textAlign:'center',
 
@@ -366,6 +399,28 @@ fontSize:d*20
       height : d* 120,
 
       padding:'10%',
+
+    },
+    logo2 : {
+
+      alignSelf :'center',
+
+      width : d * 340 ,
+
+      height : d* 180,
+
+      padding:'5%',
+
+    },
+    logo3 : {
+
+      alignSelf :'center',
+
+      width : d * 240 ,
+
+      height : d* 220,
+
+      padding:'5%',
 
     },
 

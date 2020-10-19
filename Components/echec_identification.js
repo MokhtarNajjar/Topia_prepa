@@ -4,21 +4,34 @@ import {  Image,View, Text,ImageBackground,text ,TextInput,Style,StyleSheet,Flat
 //import { Button } from 'react-native-elements';
 import styles , {d} from '../Styles/GlobalStyle'
 import Button from "react-native-bootstrap-buttons";
+import { info } from '../data/dataa';
 
 
 class echec_identification extends Component{
     constructor(props) {
         super(props);
         this.state = { 
-          Email: '',
+          reference_state: info.reference_code,
 
         };
+    }
+    componentDidMount(){
+        this.setState({reference_state:info.reference_code})
+      }
+    setreference(){
+   //     console.log(info.reference_code);
     }
     render(){
         return(
     
     <ImageBackground source= {require('../images/bg.png')} style={styles.back}>
             <View style={{flex: 1}}>
+            <View >
+        <Text style={styles.titlefinal2}>{this.setreference()}la reférence selectionné est : {console.log("mokh"+info.reference_code)}</Text>
+  <Text style={styles.titlefinal2}>{this.state.reference_state}</Text>
+  
+        </View>
+
             <Text style={styles.titlefinal}>
             Echec d'identification du locataire
               </Text>

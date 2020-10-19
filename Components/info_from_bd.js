@@ -33,8 +33,8 @@ class info_from_bd extends Component{
      <View>
         <View style={{flex:1}}>
      
-         <Text style={styles.titlefinal} > Vous souhaitez payer pour :</Text>
-         <Text style={styles.titlefinal2}>référence du locataire :</Text>
+         <Text style={styles.titleblue} > Vous souhaitez payer pour :</Text>
+         <Text style={styles.titleblue2}>référence du locataire :</Text>
    
        
         <Text style={styles.titlefinal2}> info from BD here !!!  </Text>

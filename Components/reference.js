@@ -4,26 +4,26 @@ import { View, Text,ImageBackground,text ,TextInput,Style,StyleSheet,FlatList,se
 //import { Button } from 'react-native-elements';
 import styles , {d} from '../Styles/GlobalStyle'
 import Button from "react-native-bootstrap-buttons";
-
+import {info} from '../data/dataa'
 
 class reference extends Component{
     constructor(props) {
         super(props);
         this.state = { 
           reference: '',
-
+//style={styles.container_paiement}
         };
     }
     render(){
         return(
     
     <ImageBackground source= {require('../images/bg.png')} style={styles.back}>
-            <View style={{flex: 1}}>
-            <Text style={{padding : '5%' ,paddingTop : '10%', fontSize : 18}}>
+            <View style={{flex:1}}>
+            <Text style={styles.titleblue}>
               Saisissez votre réference :</Text>        
         </View>
-        <View style={{flex: 7}}>
-        <View style={styles.container_paiement}>
+        <View style={{flex:1}}>
+        <View >
         
     
     <Input
@@ -47,6 +47,8 @@ class reference extends Component{
                 this.props.navigation.navigate("echec_identification");
 
              }else{
+                info.reference=this.state.reference;
+                console.log(info);
              this.props.navigation.navigate("info_from_bd");}
          }}
 

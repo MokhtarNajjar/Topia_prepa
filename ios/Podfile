@@ -8,6 +8,14 @@ target 'Topia_prepa' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
+
+  pod 'react-native-video', :path => '../node_modules/react-native-video'
+
+
+  pod 'react-native-camera', :path => '../node_modules/react-native-camera'
+
   target 'Topia_prepaTests' do
     inherit! :complete
     # Pods for testing

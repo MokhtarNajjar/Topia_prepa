@@ -11,16 +11,22 @@ import info_from_bd from './info_from_bd';
 import echec_identification from './echec_identification';
 import payer from './payer';
 import type_paiement from './type_paiement';
+import especes from './especes';
+import carte_bancaire from './carte_bancaire';
+import chéque from './chéque';
+import finish from './finish';
+import Camera from './Camera';
+import ProductScanRNCamera from './ProductScanRNCamera';
 
 const MyTheme = {
     dark: false,
     colors: {
-      primary: 'rgb(2, 45, 85)',
+      primary: 'rgb(222, 45, 85)',
       background: 'rgb(255, 242, 242)',
       card: 'rgb(25, 155, 295)',
-      text: 'rgb(28, 28, 30)',
-      border: 'rgb(199, 199, 204)',
-      notification: 'rgb(255, 69, 58)',
+      text: 'rgb(258, 258, 230)',
+      border: 'rgb(99, 199, 204)',
+      notification: 'rgb(255, 269, 258)',
     },
   };
 const Stack = createStackNavigator();
@@ -38,7 +44,13 @@ export default function Navigation({navigation}) {
       <Stack.Screen name="echec_identification" component={echec_identification} options={{ title: 'echec'  }}/>
       <Stack.Screen name="payer" component={payer} options={{ title: 'payer'  }}/>
       <Stack.Screen name="type_paiement" component={type_paiement} options={{ title: 'type_paiement'  }}/>
-
+      <Stack.Screen name="especes" component={especes} options={{ title: 'éspeces'  }}/>
+      <Stack.Screen name="carte_bancaire" component={carte_bancaire} options={{ title: 'carte_bancaire'  }}/>
+      <Stack.Screen name="chéque" component={chéque} options={{ title: 'chéque'  }}/>
+      <Stack.Screen name="finish" component={finish} options={{ title: ' '  }}/>
+      <Stack.Screen name="Camera" component={Camera} options={{ title: 'Camera '  }}/>
+      <Stack.Screen name="ProductScanRNCamera" component={ProductScanRNCamera} options={{ title: 'Camera '  }}/>
+      
 
 </Stack.Navigator>
 </NavigationContainer>

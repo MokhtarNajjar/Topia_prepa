@@ -11,7 +11,6 @@ import React  from 'react';
 import Navigation from './Components/Navigation';
 import Welcome2 from './Components/Welcome2';
 import { View } from 'react-native';
-
 //const Stack = createStackNavigator();
 
 export default function App() {

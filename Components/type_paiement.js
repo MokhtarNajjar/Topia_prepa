@@ -11,7 +11,7 @@ import { addTheme } from "react-native-bootstrap-buttons";
 import { color } from 'react-native-reanimated';
 import {d} from '../Styles/GlobalStyle'
 import Navigation from './Navigation'
-
+import {info} from '../data/dataa'
 class type_paiement extends Component{
     constructor(props){
         super(props);
@@ -51,13 +51,13 @@ class type_paiement extends Component{
 <ImageBackground source= {require('../images/bg.png')} style={styles.back}>
         
     <ScrollView>
-        <View >
-         <Text style={styles.title}>Comment paierez vous sur la borne :</Text> 
-        <View style={{paddingVertical:'5%'}}>
-        <Image  source= {require('../images/logo.png')} style={styles.logo } />
+        <View style={{flex:1,padding:'5%',textAlign:'center'}}>
+         <Text style={styles.titleblue}>Comment paierez vous sur la borne :</Text> 
+        <View style={{paddingVertical:'10%'}}>
+        <Image  source= {require('../images/icone-espece.png')} style={styles.logo2 } />
    
 
-        <Button label="espèces  " 
+        <Button label="espèces " 
           rounded size="sm" 
           buttonType="link"
          labelStyle={{fontStyle: 'italic',textAlign:'center',
@@ -65,15 +65,17 @@ class type_paiement extends Component{
          containerStyle ={{ textAlign:'center',alignSelf:'center',width:'80%'}} 
 
           onPress={() => {
-            
-      //this.props.navigation.navigate('identifier');
+            info.especes=true;
+            info.carte_bancaire=false;
+            info.cheque=false;
+      this.props.navigation.navigate('especes');
 
     } 
         }
             
          
          />
-       <Image  source= {require('../images/logo.png')} style={styles.logo } />
+       <Image  source= {require('../images/icone-carte.png')} style={styles.logo2 } />
    
 
    <Button label="Carte bancaire " 
@@ -84,15 +86,18 @@ class type_paiement extends Component{
     containerStyle ={{ textAlign:'center',alignSelf:'center',width:'80%'}} 
 
      onPress={() => {
-       
- //this.props.navigation.navigate('identifier');
+        info.especes=false;
+        info.carte_bancaire=true;
+        info.cheque=false;
+   
+ this.props.navigation.navigate('carte_bancaire');
 
 } 
    }
        
     
     />
-       <Image  source= {require('../images/logo.png')} style={styles.logo } />
+       <Image  source= {require('../images/icone-cheque.png')} style={styles.logo2 } />
    
 
    <Button label="chéque " 
@@ -103,8 +108,11 @@ class type_paiement extends Component{
     containerStyle ={{ textAlign:'center',alignSelf:'center',width:'80%'}} 
 
      onPress={() => {
-       
- //this.props.navigation.navigate('identifier');
+        info.especes=false;
+        info.carte_bancaire=false;
+        info.cheque=true;
+   
+ this.props.navigation.navigate('chéque');
 
 } 
    }
