@@ -48,7 +48,9 @@ class finish extends Component{
              </Text>
         <View style={{padding:'10%',alignSelf:'center'}}>
              <QRCode
-      value={info.montant+info.reference}
+    //  value={info.montant+info.reference}
+      value={info.reference+"|"+info.montant+"|"}
+      
       size={190}
       logoSize={330}
       logo={{uri: base64Logo}}

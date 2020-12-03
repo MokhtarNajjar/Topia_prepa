@@ -17,7 +17,8 @@ import chéque from './chéque';
 import finish from './finish';
 import Camera from './Camera';
 import ProductScanRNCamera from './ProductScanRNCamera';
-
+import NavigationIcon from './NavigationIcon' ;
+import formulaire from './formulaire'; 
 const MyTheme = {
     dark: false,
     colors: {
@@ -37,10 +38,10 @@ export default function Navigation({navigation}) {
       <Stack.Navigator initialRouteName="Welcome2" >
               
       <Stack.Screen name="Welcome2" component={Welcome2} options={{ title: ''  }}/>
-      <Stack.Screen name="identifier" component={identifier} options={{ title: 'identifier'  }}/>
-      <Stack.Screen name="reference" component={reference} options={{ title: 'reference'  }}/>
-      <Stack.Screen name="Scanner_code" component={Scanner_code} options={{ title: 'scanner_code'  }}/>
-      <Stack.Screen name="info_from_bd" component={info_from_bd} options={{ title: 'info_from_bd'  }}/>
+      <Stack.Screen name="identifier" component={identifier} options={{ title:' ' ,headerTitle:<NavigationIcon />  }}/>
+      <Stack.Screen name="reference" component={reference} options={{ title: 'reference' ,headerTitle:<NavigationIcon /> }}/>
+      <Stack.Screen name="Scanner_code" component={Scanner_code} options={{ title: 'scanner_code' ,headerTitle:<NavigationIcon />  }}/>
+      <Stack.Screen name="info_from_bd" component={info_from_bd} options={{ title: 'info_from_bd' ,headerTitle:<NavigationIcon /> }}/>
       <Stack.Screen name="echec_identification" component={echec_identification} options={{ title: 'echec'  }}/>
       <Stack.Screen name="payer" component={payer} options={{ title: 'payer'  }}/>
       <Stack.Screen name="type_paiement" component={type_paiement} options={{ title: 'type_paiement'  }}/>

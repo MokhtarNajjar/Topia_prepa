@@ -11,16 +11,36 @@ class echec_identification extends Component{
     constructor(props) {
         super(props);
         this.state = { 
-          reference_state: info.reference_code,
+            data:'',
+            reference_state: info.reference_code,
 
         };
     }
+    componentWillMount(){
+        this.setState({reference_state:info.reference_code})
+    console.log("did mount");  
+    }
+/*
     componentDidMount(){
         this.setState({reference_state:info.reference_code})
-      }
+    console.log("did mount");  
+    }
+    */
     setreference(){
    //     console.log(info.reference_code);
     }
+    getData(){
+        setTimeout(() => {
+          this.setState({
+            reference_state: info.reference_code
+          })
+        }, 500)
+      }
+    
+      componentDidMount(){
+        this.getData();
+      }
+    
     render(){
         return(
     
@@ -29,11 +49,11 @@ class echec_identification extends Component{
             <View >
         <Text style={styles.titlefinal2}>{this.setreference()}la reférence selectionné est : {console.log("mokh"+info.reference_code)}</Text>
   <Text style={styles.titlefinal2}>{this.state.reference_state}</Text>
-  
         </View>
 
             <Text style={styles.titlefinal}>
             Echec d'identification du locataire
+
               </Text>
 
               <Text style={styles.titlefinal2}>

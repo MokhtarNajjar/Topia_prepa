@@ -22,19 +22,20 @@ const styles = StyleSheet.create({
 
     back : {
 
-      flex: 7,
+    //  flex: 7,
 
       //overflow: 'visible',
 
       //justifyContent: "center",
 
-      position: 'relative',
+//      position: 'relative',
 
-      resizeMode:'cover' , // 'contain',//'cover',
+  //    resizeMode:'cover' , // 'contain',//'cover',
 
      //height:h ,
 
-      width: d * 380
+      width: '100%',
+      height:'100%'
 
     
 

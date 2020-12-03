@@ -59,13 +59,6 @@ class especes extends Component{
             this.setState({ visible: true });
              }}
 />
-<Text>lool2</Text>
-<VideoPlayer
-    video={{ uri: 'https://www.youtube.com/watch?v=DkVdl75k3D4' }}
-    videoWidth={1600}
-    videoHeight={900}
- //   thumbnail={{ uri: 'https://i.picsum.photos/id/866/1600/900.jpg' }}
-/>
 <Dialog
     visible={this.state.visible}
     onTouchOutside={() => {
@@ -94,8 +87,8 @@ class especes extends Component{
       <DialogContent>
       <VideoPlayer
     video={{ uri:'https://www.youtube.com/watch?v=DkVdl75k3D4' }}
-    videoWidth={1600}
-    videoHeight={900}
+//    videoWidth={1600}
+ //   videoHeight={900}
  //   thumbnail={{ uri: 'https://i.picsum.photos/id/866/1600/900.jpg' }}
 />
     </DialogContent>

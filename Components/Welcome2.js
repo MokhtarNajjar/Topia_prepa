@@ -86,8 +86,8 @@ class Welcome2 extends Component{
       }
        */
       console.log(this.props)
-      this.props.navigation.navigate('identifier');
-//        this.props.navigation.navigate('especes');
+//      this.props.navigation.navigate('identifier');
+        this.props.navigation.navigate('formulaire');
 
     } 
         }
