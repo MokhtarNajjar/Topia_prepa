@@ -12,7 +12,7 @@ class payer extends Component{
         super(props);
  
         this.state = { 
-            montant: '67',
+            montant: '',
             montant_modified:'',
             visible:false,
 
@@ -20,30 +20,34 @@ class payer extends Component{
     }
     render(){
         return(
-    
+    //Keyboardavoidview pour permettre au button d'etre toujours visibles
     <ImageBackground source= {require('../images/bg.png')} style={styles.back}>
-            <View style={{flex: 1}}>
-            <Text style={styles.titlefinal}>
+            <View style={{flex:0.2}}>
+            <Text style={styles.titleblue2}>
               Confirmez le montant a payer :</Text>        
         </View>
-        <View style={{flex: 29}}>
+        <View style={{flex:33 , paddingTop:'0%'}}>
         <View style={styles.container_paiement}>
     <Input
-//        placeholder={this.props.montant_fixe}
-        //onChangeText={(montant => this.setState({montant}))}
+        placeholder={this.props.montant_fixe}
+        onChangeText={(montant => this.setState({montant}))}
         keyboardType='numeric'
          autoCapitalize='none'
-        value={this.state.montant +" $ "}  
-      
+        value={this.state.montant }  
+        
     />
      
+     </View>
+      
+      
+              
     
-  <View style={{flexDirection:'row'}}>
-      <View style={{padding:'10%'}}>
+  <View style={{flexDirection:'row',alignItems:'center',padding:'15%',paddingTop:'0%'}}>
+      <View style={{padding:'5%'}}>
      <Button 
       label="  VALIDEZ  "
       rounded size="sm" labelStyle={{fontStyle: 'italic',
-      fontSize : d*20 , alignSelf:'center'}} 
+      fontSize : d*16 , alignSelf:'center'}} 
       containerStyle ={{ }} 
          onPress={()=> {
                 info.montant=this.state.montant
@@ -53,12 +57,12 @@ class payer extends Component{
 
 />
 </View>
-<View style={{padding:'10%'}}>
+<View style={{padding:'5%'}}>
 <Button 
       label="  MODIFIEZ  "
       buttonType="warning"
       rounded size="sm" labelStyle={{fontStyle: 'italic',
-      fontSize : d*20 , alignSelf:'center' , padding:'5%'}} 
+      fontSize : d*16 , alignSelf:'center' , padding:'5%'}} 
       containerStyle ={{ }} 
          onPress={()=> {
             this.setState({ visible: true });
@@ -106,11 +110,7 @@ class payer extends Component{
   </Dialog>
 </View>
 </View>
-        
-        </View>
-      
-    </View>
-            
+</View>  
         
             </ImageBackground>
             );

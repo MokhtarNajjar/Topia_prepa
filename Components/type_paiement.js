@@ -52,7 +52,7 @@ class type_paiement extends Component{
         
     <ScrollView>
         <View style={{flex:1,padding:'5%',textAlign:'center'}}>
-         <Text style={styles.titleblue}>Comment paierez vous sur la borne :</Text> 
+         <Text style={styles.titleblue2}>Comment paierez vous sur la borne :</Text> 
         <View style={{paddingVertical:'10%'}}>
         <Image  source= {require('../images/icone-espece.png')} style={styles.logo2 } />
    
@@ -68,6 +68,7 @@ class type_paiement extends Component{
             info.especes=true;
             info.carte_bancaire=false;
             info.cheque=false;
+            info.methode_de_paiement="ESP";
       this.props.navigation.navigate('especes');
 
     } 
@@ -89,6 +90,7 @@ class type_paiement extends Component{
         info.especes=false;
         info.carte_bancaire=true;
         info.cheque=false;
+        info.methode_de_paiement="Carte_Bancaire";
    
  this.props.navigation.navigate('carte_bancaire');
 
@@ -111,7 +113,7 @@ class type_paiement extends Component{
         info.especes=false;
         info.carte_bancaire=false;
         info.cheque=true;
-   
+        info.methode_de_paiement="CHEQUE";
  this.props.navigation.navigate('chéque');
 
 } 

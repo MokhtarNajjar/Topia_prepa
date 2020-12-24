@@ -19,7 +19,7 @@ class reference extends Component{
     
     <ImageBackground source= {require('../images/bg.png')} style={styles.back}>
             <View style={{flex:1}}>
-            <Text style={styles.titleblue}>
+            <Text style={styles.titleblue2}>
               Saisissez votre réference :</Text>        
         </View>
         <View style={{flex:1}}>

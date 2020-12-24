@@ -11,6 +11,7 @@ import { addTheme } from "react-native-bootstrap-buttons";
 import { color } from 'react-native-reanimated';
 import {d} from '../Styles/GlobalStyle'
 import Navigation from './Navigation'
+import { info } from '../data/dataa';
 
 class info_from_bd extends Component{
     constructor(props){
@@ -33,12 +34,9 @@ class info_from_bd extends Component{
      <View>
         <View style={{flex:1}}>
      
-         <Text style={styles.titleblue} > Vous souhaitez payer pour :</Text>
-         <Text style={styles.titleblue2}>référence du locataire :</Text>
-   
-       
-        <Text style={styles.titlefinal2}> info from BD here !!!  </Text>
-
+         <Text style={styles.titleblue2} > Vous souhaitez payer pour la réference  :</Text>
+         <Text style={styles.titleblue2}>{info.reference}</Text>
+            <Text></Text>
         <Button label="Oui ,Je paye" 
           rounded size="sm" 
          labelStyle={{fontStyle: 'italic',textAlign:'center',
@@ -49,9 +47,6 @@ class info_from_bd extends Component{
                  this.props.navigation.navigate('payer');
 
           }}
-  
-            
-         
          />
 <View style={{padding:'10%',flex:2}}>
 <Button label="Non" 
@@ -60,7 +55,6 @@ class info_from_bd extends Component{
           labelStyle={{fontStyle: 'italic',textAlign:'center',
          fontSize : d*18 , }} 
          containerStyle ={{ textAlign:'center',alignSelf:'center',width:'80%'}} 
-
           onPress={() => {
         this.props.navigation.navigate('Welcome2');
 

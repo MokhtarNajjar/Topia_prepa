@@ -27,7 +27,7 @@ class Scanner_code extends Component{
     
     <ImageBackground source= {require('../images/bg.png')} style={styles.back}>
             <View style={{flex: 1}}>
-            <Text style={styles.titleblue}>
+            <Text style={styles.titleblue2}>
               Placez le code à barres de l'avis d'échéance 
               sous la caméra de votre smartphone
               </Text>        

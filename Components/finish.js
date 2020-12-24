@@ -25,9 +25,10 @@ class finish extends Component{
                 }        //const netInfo = useNetInfo();
         //addTheme( themeName, labelColor, disabledLabelColor, backgroundColor, disabledBackgroundColor );
         addTheme( "myTheme", "white", "blue", "blue", "yellow" );
-  
-    }
-
+            }
+            
+       
+    
  render(){
     const base64Logo = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAA..';
 
@@ -39,22 +40,20 @@ class finish extends Component{
         
     <ScrollView>
         <View >
-         <Text style={styles.titleblue2}>Enregistré</Text>
-         <Text style={{color:"#8249ad",textAlign:'center',fontSize:d*18,padding:'10%'}}>
-            Mokh is here again
-         </Text>
-         <Text style={styles.titleblue}>
+         <Text style={styles.titleblue2}>
              Merci de présenter ce code au scanner de la borne
              </Text>
         <View style={{padding:'10%',alignSelf:'center'}}>
              <QRCode
+        
     //  value={info.montant+info.reference}
-      value={info.reference+"|"+info.montant+"|"}
-      
+      value={info.reference.substring(0,8)+"|"+info.montant+"|" +info.methode_de_paiement}
+    
       size={190}
       logoSize={330}
       logo={{uri: base64Logo}}
-/>        
+/>  
+{console.log(info.reference.substring(0,8)+"|"+info.montant+"|"+info.methode_de_paiement)}      
 </View>
        </View>
          </ScrollView>

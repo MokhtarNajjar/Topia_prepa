@@ -87,17 +87,21 @@ const styles = StyleSheet.create({
    
    titleblue2 : { 
 textAlign:'center',
-    flex:5,
+    
           padding : '5%',
           paddingBottom:'0%',
+          paddingTop:'10%',
           justifyContent: 'center',
           alignItems: 'center' , 
          fontStyle: 'italic',
     //     fontWeight: 'bold',
-         fontSize: d*22,
-        color:'#4f4c9c',
-         alignSelf:'center',
-       },
+         fontSize: d*21,
+       // color:'#4f4c9c',
+        // alignSelf:'center',
+        textAlign:'auto',
+         color:'#2d6187',
+ 
+        },
        titleblue3 : { 
         textAlign:'center',
             flex:5,

@@ -20,9 +20,7 @@ class identifier extends Component{
                 } 
                 
     }
-    
  render(){
-     
     
         return(  
             <ImageBackground source= {require('../images/bg.png')} style={styles.back}>
@@ -30,7 +28,7 @@ class identifier extends Component{
     <ScrollView>
             <View style={{flex:5}}>
                 <View Style={{padding:'20%'}}> 
-             <Text style={styles.titleblue}>Pour s'identifier , Vous souhaitez</Text>
+             <Text style={styles.titleblue2}>Pour s'identifier , Vous souhaitez</Text>
              </View>
              <View style={{padding:'10%',flex:3}}>
              <Button label="Scanner le code barre de votre facture " 
@@ -40,13 +38,11 @@ class identifier extends Component{
                 containerStyle ={{ textAlign:'center',alignSelf:'center',width:'80%'}} 
                 onPress={() => {
                     this.props.navigation.navigate("Scanner_code");
-
                 }}
     />
     </View>
- <Text style={styles.titleblue}>ou  </Text>
+ <Text style={styles.titlefinal2}> ou  </Text>
  <View style={{padding:'10%',flex:3}}>
-            
  <Button label="Tapez votre réference client " 
               rounded size="sm" 
                 labelStyle={{fontStyle: 'italic',textAlign:'center',

@@ -53,7 +53,7 @@ class Welcome2 extends Component{
     <ScrollView>
         <View >
          <Text style={styles.title}>Bienvenue</Text>
-         <Text style={{textAlign:'center',fontSize:d*20}}>TOPIA PAY</Text>
+         <Text style={{textAlign:'center',fontSize:d*18}}>TOPIA PAY</Text>
    
         <View style={{paddingVertical:'5%'}}>
         <Image  source= {require('../images/logo.png')} style={styles.logo } />
@@ -62,18 +62,18 @@ class Welcome2 extends Component{
         <Text style={styles.titlefinal2}>Préparez votre paiement sur votre mobile</Text>
         <Text style={styles.titlefinal2}>Rendez vous sur une borne de paiement </Text>
         <Text style={styles.titlefinal2}>Scannez le code que vous recevrez sur votre mobile </Text>
-        <Text style={{fontSize:d*20,textAlign:'center'}}>Payez , </Text>
-        <Text style={{fontSize:d*20,textAlign:'center'}}>C'est fait !  </Text>
+        <Text style={{fontSize:d*18,textAlign:'center'}}>Payez , </Text>
+        <Text style={{fontSize:d*18,textAlign:'center'}}>C'est fait !  </Text>
 
         <Button label="Tapez Suite pour Continuer" 
           rounded size="sm" 
          labelStyle={{fontStyle: 'italic',textAlign:'center',
-         fontSize : d*18 , }} 
+         fontSize : d*16 , }} 
          containerStyle ={{ textAlign:'center',alignSelf:'center',width:'80%'}} 
 
           onPress={() => {
             
-      /*
+      
             console.log(this.state.connectionState)
            if(this.state.connectionState === true){      
            this.props.navigation.navigate('identifier');
@@ -84,15 +84,7 @@ class Welcome2 extends Component{
            }
         
       }
-       */
-      console.log(this.props)
-//      this.props.navigation.navigate('identifier');
-        this.props.navigation.navigate('formulaire');
-
     } 
-        }
-            
-         
          />
 
         </View>

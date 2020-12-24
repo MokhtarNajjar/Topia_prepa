@@ -36,11 +36,11 @@ class especes extends Component{
 <ScrollView>
         
         <View style={{padding:'5%'}}>
-         <Text style={styles.titleblue}>
+         <Text style={styles.titleblue2}>
              Sur la borne,nous 
          vous demanderons de payer :</Text>
    <View style={{padding:'5%',paddingLeft:'20%',paddingRight:'20%'}}>
-        <Text style={{color:"#4f4c9c",textAlign:"center", fontSize :d*29.5,backgroundColor:"white"}}>234 $</Text>
+        <Text style={{color:"#4f4c9c",textAlign:"center", fontSize :d*29.5,backgroundColor:"white"}}>{info.montant} $</Text>
         </View>
     <View>
         <Text style={styles.titleblue2}>
@@ -74,6 +74,7 @@ class especes extends Component{
             }}
           />
           <DialogButton
+            style={{width:100}}
             text="OK"
             onPress={() => {
            //    this.state.montant= this.state.montant_modified ;
@@ -84,12 +85,12 @@ class especes extends Component{
         </DialogFooter>
       }
   >
-      <DialogContent>
+      <DialogContent style={{height:Dimensions.get('window').height/3 , width:d*380}}>
       <VideoPlayer
-    video={{ uri:'https://www.youtube.com/watch?v=DkVdl75k3D4' }}
-//    videoWidth={1600}
- //   videoHeight={900}
- //   thumbnail={{ uri: 'https://i.picsum.photos/id/866/1600/900.jpg' }}
+      //  video={{ uri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4' }}
+     video={{uri:info.url}}
+      autoplay
+     
 />
     </DialogContent>
   </Dialog>

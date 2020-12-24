@@ -37,7 +37,7 @@ export default function Navigation({navigation}) {
 <NavigationContainer  theme={MyTheme}>
       <Stack.Navigator initialRouteName="Welcome2" >
               
-      <Stack.Screen name="Welcome2" component={Welcome2} options={{ title: ''  }}/>
+      <Stack.Screen name="Welcome2" component={Welcome2} navigationOptions options={{ title: ''  , headerTransparent: true,}} />
       <Stack.Screen name="identifier" component={identifier} options={{ title:' ' ,headerTitle:<NavigationIcon />  }}/>
       <Stack.Screen name="reference" component={reference} options={{ title: 'reference' ,headerTitle:<NavigationIcon /> }}/>
       <Stack.Screen name="Scanner_code" component={Scanner_code} options={{ title: 'scanner_code' ,headerTitle:<NavigationIcon />  }}/>

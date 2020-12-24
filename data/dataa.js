@@ -4,10 +4,11 @@ export var info={
     carte_bancaire:false,
     cheque:false,
    reference:"",
-   reference_code:"",
+   methode_de_paiement:"",
    // Num_compte:"",
    // Montant_payé:"",
     //Reception_SMS:"",
     Email:"",
     //telephone_number:"",
+    url:'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
 } 
