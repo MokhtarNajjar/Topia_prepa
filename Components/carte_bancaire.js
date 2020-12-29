@@ -33,11 +33,11 @@ class carte_bancaire extends Component{
 <ImageBackground source= {require('../images/bg.png')} style={styles.back}>
 <ScrollView>
         
-        <View style={{padding:'5%'}}>
-         <Text style={styles.titleblue}>
+        <View style={{padding:'0%'}}>
+         <Text style={styles.titleblue2}>
              Sur la borne,nous 
          vous demanderons de payer :</Text>
-   <View style={{padding:'5%',paddingLeft:'20%',paddingRight:'20%'}}>
+   <View style={{paddingTop:'5%',paddingLeft:'20%',paddingRight:'20%'}}>
         <Text style={{color:"#4f4c9c",textAlign:"center", fontSize :d*29.5,backgroundColor:"white"}}>{info.montant}$</Text>
         </View>
     <View>
@@ -46,12 +46,12 @@ class carte_bancaire extends Component{
             à côté de l'écran
         </Text>
     </View>
-    <View>
+    <View style={{padding:'5%'}}>
     <Button 
       label="Cliquez ici pour voir la démonstration en vidéo"
       buttonType="info"
       rounded size="sm" labelStyle={{fontStyle: 'italic',
-      fontSize : d*13 , alignSelf:'center'}} 
+      fontSize : d*14 , alignSelf:'center'}} 
       containerStyle ={{ }} 
          onPress={()=> {
             this.setState({ visible: true });
@@ -65,7 +65,7 @@ class carte_bancaire extends Component{
     footer={
         <DialogFooter>
           <DialogButton
-            text="CANCEL"
+            text="Annuler"
             onPress={() => {
         //this.state.montant_modified = this.state.montant ;
                this.setState({visible:false})
@@ -76,7 +76,6 @@ class carte_bancaire extends Component{
             text="OK"
             onPress={() => {
            //    this.state.montant= this.state.montant_modified ;
-
                 this.setState({visible:false})  
             }}
           />
@@ -93,7 +92,7 @@ class carte_bancaire extends Component{
     </DialogContent>
   </Dialog>
     </View>
-    <View style={{padding:'10%'}}>
+    <View style={{padding:'5%'}}>
         <Image  source= {require('../images/insert-cb.png')} style={styles.logo2 } />
   
     </View>

@@ -19,6 +19,7 @@ import Camera from './Camera';
 import ProductScanRNCamera from './ProductScanRNCamera';
 import NavigationIcon from './NavigationIcon' ;
 import formulaire from './formulaire'; 
+import Suite_esp from './Suite_esp';
 const MyTheme = {
     dark: false,
     colors: {
@@ -51,6 +52,7 @@ export default function Navigation({navigation}) {
       <Stack.Screen name="finish" component={finish} options={{ title: ' '  }}/>
       <Stack.Screen name="Camera" component={Camera} options={{ title: 'Camera '  }}/>
       <Stack.Screen name="ProductScanRNCamera" component={ProductScanRNCamera} options={{ title: 'Camera '  }}/>
+      <Stack.Screen name="Suite_esp" component={Suite_esp} options={{ title: ''  }}/>
       
 
 </Stack.Navigator>

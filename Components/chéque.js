@@ -39,25 +39,25 @@ class chéque extends Component{
 <ScrollView>
 
         
-        <View style={{padding:'5%'}}>
-         <Text style={styles.titleblue}>
+        <View style={{padding:'0%'}}>
+         <Text style={styles.titleblue2 }>
              Sur la borne,nous 
          vous demanderons de payer :</Text>
-   <View style={{padding:'5%',paddingLeft:'20%',paddingRight:'20%'}}>
+   <View style={{paddingBottom:'1%',paddingLeft:'20%',paddingRight:'20%'}}>
         <Text style={{color:"#4f4c9c",textAlign:"center", fontSize :d*29.5,backgroundColor:"white"}}>{info.montant} $</Text>
         </View>
-    <View>
+    <View style={{paddingBottom:'1%'}}>
         <Text style={styles.titleblue2}>
             Vous allez insérer votre chéque bancaire dans le lecteur 
             à côté de l'écran
         </Text>
     </View>
-    <View>
+    <View style={{padding:'5%',paddingBottom:'0%'}}>
     <Button 
       label="Cliquez ici pour voir la démonstration en vidéo"
       buttonType="info"
       rounded size="sm" labelStyle={{fontStyle: 'italic',
-      fontSize : d*13 , alignSelf:'center'}} 
+      fontSize : d*14 , alignSelf:'center'}} 
       containerStyle ={{ }} 
          onPress={()=> {
              this.state.visible=true
@@ -101,7 +101,7 @@ class chéque extends Component{
  </Dialog>
 
     </View>
-    <View style={{padding:'10%'}}>
+    <View style={{padding:'5%'}}>
         <Image  source= {require('../images/insert-cheque.png')} style={styles.logo2 } />
   
     </View>

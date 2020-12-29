@@ -36,12 +36,7 @@ class payer extends Component{
         value={this.state.montant }  
         
     />
-     
-     </View>
-      
-      
-              
-    
+                    
   <View style={{flexDirection:'row',alignItems:'center',padding:'15%',paddingTop:'0%'}}>
       <View style={{padding:'5%'}}>
      <Button 
@@ -108,6 +103,7 @@ class payer extends Component{
 
     </DialogContent>
   </Dialog>
+  </View>
 </View>
 </View>
 </View>  

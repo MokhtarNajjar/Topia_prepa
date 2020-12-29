@@ -71,8 +71,6 @@ const styles = StyleSheet.create({
     },
 
     titleblue : { 
-
-
       padding : '5%',
       paddingBottom:'0%',
       justifyContent: 'center',
@@ -126,15 +124,10 @@ textAlign:'center',
       //paddingRight:'15%',
 
       padding:'5%',
-
       justifyContent: 'center',
-
       alignItems: 'center' , 
-
      fontStyle: 'italic',
-
      fontSize: d*36,
-
      alignSelf:'center',
    },
 

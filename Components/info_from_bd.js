@@ -35,7 +35,7 @@ class info_from_bd extends Component{
         <View style={{flex:1}}>
      
          <Text style={styles.titleblue2} > Vous souhaitez payer pour la réference  :</Text>
-         <Text style={styles.titleblue2}>{info.reference}</Text>
+         <Text style={styles.title2}>{info.reference}</Text>
             <Text></Text>
         <Button label="Oui ,Je paye" 
           rounded size="sm" 

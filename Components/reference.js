@@ -22,21 +22,15 @@ class reference extends Component{
             <Text style={styles.titleblue2}>
               Saisissez votre réference :</Text>        
         </View>
-        <View style={{flex:1}}>
+        <View style={{flex:1 }}>
         <View >
-        
-    
-    <Input
+        <Input
         placeholder='Votre réference'
         onChangeText={(reference => this.setState({reference}))}
         keyboardType='email-address'
         autoCapitalize='none'
         value={this.state.reference}
-      
     />
-     
-    
-  
      <Button 
       label=" Validez"
       rounded size="sm" labelStyle={{fontStyle: 'italic',

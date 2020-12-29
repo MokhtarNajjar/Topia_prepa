@@ -31,7 +31,7 @@ class Scanner_code extends Component{
               Placez le code à barres de l'avis d'échéance 
               sous la caméra de votre smartphone
               </Text>        
-        </View>
+        
         <View>
         <Button 
       label=" Cliquez ici pour ouvrir la caméra"
@@ -47,7 +47,7 @@ class Scanner_code extends Component{
      
      
         </View>
-        <View style={{flex: 2}}>
+        <View style={{flex:2}}>
         <View style={styles.container_paiement}>
         
      <Button 
@@ -57,7 +57,6 @@ class Scanner_code extends Component{
       fontSize : d*20 , alignSelf:'center',textAlign:'center' }} 
       containerStyle ={{ alignSelf:'center',width:'90%',textAlign:'center' }} 
          onPress={()=> {
-            console.log("lokl");
 //            this.setState({visible:true})
             this.props.navigation.navigate("reference");
       //this.props.navigation.navigate("Camera");
@@ -103,7 +102,7 @@ class Scanner_code extends Component{
       
     </View>
             
-        
+    </View>
             </ImageBackground>
             );
     

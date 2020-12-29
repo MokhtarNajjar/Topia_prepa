@@ -40,7 +40,7 @@ class finish extends Component{
         
     <ScrollView>
         <View >
-         <Text style={styles.titleblue2}>
+         <Text style={styles.titleblue}>
              Merci de présenter ce code au scanner de la borne
              </Text>
         <View style={{padding:'10%',alignSelf:'center'}}>

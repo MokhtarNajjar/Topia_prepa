@@ -27,18 +27,16 @@ class ProductScanRNCamera extends Component {
       info.reference_code=this.state.barcode;
       console.log(info);
       console.log(this.state.barcode);
-      
        // this.props.navigation.navigate("Scanner_code");
        this.props.navigation.navigate("echec_identification");
        console.warn('onBarCodeRead call');
-	
     }
     return;
   }
 
   async takePicture() {
     if (this.camera) {
-      const options = { quality: 0.5, base64: true };
+      const options = { quality: 1, base64: true };
       const data = await this.camera.takePictureAsync(options);
       console.log(data.uri);
     }
@@ -54,7 +52,7 @@ class ProductScanRNCamera extends Component {
           alignItems: 'center',
         }}
       >
-        <Text>Waiting</Text>
+        <Text>En cours ... </Text>
       </View>
     );
   }
@@ -72,13 +70,13 @@ class ProductScanRNCamera extends Component {
             onBarCodeRead={this.onBarCodeRead.bind(this)}
             onFocusChanged={() => {}}
             onZoomChanged={() => {}}
-            permissionDialogTitle={'Permission to use camera'}
-            permissionDialogMessage={'We need your permission to use your camera phone'}
+            permissionDialogTitle={'Permission d\'utilisation de camera'}
+            permissionDialogMessage={'Nous avons besoin de votre permission pour utiliser la camera de votre téléphone'}
             style={styles.preview}
             type={this.state.camera.type}
         />
         <View style={[styles.overlay, styles.topOverlay]}>
-	  <Text style={styles.scanScreenMessage}>Please scan the barcode.</Text>
+	  <Text style={styles.scanScreenMessage}>SVP selectionner  votre Code a barres .</Text>
 	</View>
 	<View style={[styles.overlay, styles.bottomOverlay]}>
           <Button
